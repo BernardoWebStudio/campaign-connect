@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Youtube, Instagram, Facebook, MessageCircle, Handshake, ArrowUpRight } from "lucide-react";
-import heroImage from "@/assets/candidate-hero.jpg";
+
 import { profile, links, type LinkItem } from "@/config/links";
 
 export const Route = createFileRoute("/")({
@@ -59,20 +59,20 @@ function LinkBio() {
       />
 
       <div className="relative mx-auto flex min-h-screen max-w-xl flex-col items-center px-5 py-10 sm:py-14">
-        {/* Hero image */}
+        {/* Emblem */}
         <div
-          className="relative w-full overflow-hidden rounded-3xl border-4 border-card shadow-[var(--shadow-soft)]"
+          className="relative flex h-32 w-32 items-center justify-center rounded-full border-4 border-card bg-gradient-to-br from-primary to-[oklch(0.32_0.13_250)] shadow-[var(--shadow-soft)] ring-2 ring-gold/60 sm:h-36 sm:w-36"
           style={{ animation: "fadeUp 0.7s ease-out both" }}
         >
-          <div className="absolute inset-0 ring-1 ring-inset ring-gold/40" />
-          <img
-            src={heroImage}
-            alt={`Arte de campanha de ${profile.name}`}
-            width={1024}
-            height={1024}
-            className="aspect-square w-full object-cover"
-          />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-primary/70 to-transparent" />
+          <span className="font-display text-4xl font-extrabold text-gold sm:text-5xl">
+            {profile.name
+              .split(" ")
+              .filter(Boolean)
+              .slice(0, 2)
+              .map((w) => w[0])
+              .join("")
+              .toUpperCase() || "PC"}
+          </span>
         </div>
 
         {/* Name + tagline */}
