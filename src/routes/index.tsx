@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Youtube, Instagram, Facebook, MessageCircle, Handshake, ArrowUpRight } from "lucide-react";
-import heroImage from "@/assets/candidate-hero.jpg";
+
 import { profile, links, type LinkItem } from "@/config/links";
 
 export const Route = createFileRoute("/")({
