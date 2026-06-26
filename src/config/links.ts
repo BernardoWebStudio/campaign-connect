@@ -16,7 +16,7 @@ export type LinkItem = {
 export const links: LinkItem[] = [
   { label: "WhatsApp", href: "https://chat.whatsapp.com/JddfxdYYq9PDRzIBNagtQV?mode=gi_t", icon: "whatsapp" },
   {
-    label: "Faça Parte da Nossa Caminhada",
+    label: "Quero conectar pontes",
     href: "https://ulissis-lima.vercel.app",
     icon: "handshake",
   },
