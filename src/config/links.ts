@@ -1,6 +1,6 @@
 // Configuração simples — edite aqui para alterar nome, frase e links.
 export const profile = {
-  name: "Nome do Pré-Candidato",
+  name: "Ulissis Lima",
   tagline: "Juntos podemos construir um futuro melhor para nossa comunidade.",
   ctaTitle: "Faça Parte da Nossa Caminhada",
   ctaSubtitle:
