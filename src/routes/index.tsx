@@ -59,53 +59,21 @@ function LinkBio() {
       />
 
       <div className="relative mx-auto flex min-h-screen max-w-xl flex-col items-center px-5 py-10 sm:py-14">
-        {/* Emblem */}
+
+        {/* Banner */}
         <div
-          className="relative flex h-32 w-32 items-center justify-center rounded-full border-4 border-card bg-gradient-to-br from-primary to-[oklch(0.32_0.13_250)] shadow-[var(--shadow-soft)] ring-2 ring-gold/60 sm:h-36 sm:w-36"
+          className="w-full overflow-hidden rounded-2xl shadow-[var(--shadow-soft)]"
           style={{ animation: "fadeUp 0.7s ease-out both" }}
         >
-          <span className="font-display text-4xl font-extrabold text-gold sm:text-5xl">
-            {profile.name
-              .split(" ")
-              .filter(Boolean)
-              .slice(0, 2)
-              .map((w) => w[0])
-              .join("")
-              .toUpperCase() || "PC"}
-          </span>
+          <img
+            src="/ulissis-banner.png"
+            alt="Ulissis Lima - Cantor Católico"
+            className="w-full object-contain"
+          />
         </div>
 
-        {/* Name + tagline */}
-        <section
-          className="mt-7 text-center"
-          style={{ animation: "fadeUp 0.7s ease-out 0.1s both" }}
-        >
-          <div className="mx-auto mb-3 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-xs font-semibold tracking-wide text-primary uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold" />
-            Pré-Candidato
-          </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-foreground sm:text-4xl">
-            {profile.name}
-          </h1>
-          <p className="mx-auto mt-3 max-w-md text-balance text-base leading-relaxed text-muted-foreground">
-            "{profile.tagline}"
-          </p>
-        </section>
 
-        {/* CTA copy */}
-        <section
-          className="mt-8 w-full rounded-2xl border border-border bg-gradient-to-br from-primary to-[oklch(0.32_0.13_250)] p-6 text-center text-primary-foreground shadow-[var(--shadow-soft)]"
-          style={{ animation: "fadeUp 0.7s ease-out 0.15s both" }}
-        >
-          <h2 className="text-xl font-bold sm:text-2xl">
-            <span className="text-gold">★</span> {profile.ctaTitle}
-          </h2>
-          <p className="mx-auto mt-2 max-w-md text-sm leading-relaxed text-primary-foreground/85">
-            {profile.ctaSubtitle}
-          </p>
-        </section>
-
-        {/* Links */}
+{/* Links */}
         <section className="mt-6 flex w-full flex-col gap-3">
           {links.map((item, i) => (
             <LinkButton key={item.label} item={item} index={i} />

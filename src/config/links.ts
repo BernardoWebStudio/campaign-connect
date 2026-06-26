@@ -14,13 +14,13 @@ export type LinkItem = {
 };
 
 export const links: LinkItem[] = [
-  { label: "YouTube", href: "https://youtube.com/", icon: "youtube" },
-  { label: "Instagram", href: "https://instagram.com/", icon: "instagram" },
-  { label: "Facebook", href: "https://facebook.com/", icon: "facebook" },
-  { label: "WhatsApp", href: "https://wa.me/", icon: "whatsapp" },
+  { label: "WhatsApp", href: "https://chat.whatsapp.com/JddfxdYYq9PDRzIBNagtQV?mode=gi_t", icon: "whatsapp" },
   {
     label: "Faça Parte da Nossa Caminhada",
-    href: "#", // substituir pelo link do formulário de apoiadores
+    href: "https://ulissis-lima.vercel.app",
     icon: "handshake",
   },
+  { label: "Instagram", href: "https://www.instagram.com/ulissislima", icon: "instagram" },
+  { label: "Facebook", href: "https://www.facebook.com/ulissis.lima/", icon: "facebook" },
+  { label: "YouTube", href: "https://www.youtube.com/@UlissisLima", icon: "youtube" },
 ];
