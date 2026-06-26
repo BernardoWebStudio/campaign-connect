@@ -24,8 +24,17 @@ const iconMap = {
   handshake: Handshake,
 } as const;
 
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/>
+    </svg>
+  );
+}
+
 function LinkButton({ item, index }: { item: LinkItem; index: number }) {
-  const Icon = iconMap[item.icon];
+  const isTiktok = item.icon === "tiktok";
+  const Icon = !isTiktok ? iconMap[item.icon as keyof typeof iconMap] : null;
   return (
     <a
       href={item.href}
@@ -35,7 +44,7 @@ function LinkButton({ item, index }: { item: LinkItem; index: number }) {
       style={{ animation: `fadeUp 0.6s ease-out ${0.2 + index * 0.08}s both` }}
     >
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-foreground transition-colors group-hover:bg-gold group-hover:text-gold-foreground">
-        <Icon className="h-5 w-5" />
+        {isTiktok ? <TikTokIcon className="h-5 w-5" /> : Icon && <Icon className="h-5 w-5" />}
       </span>
       <span className="min-w-0 flex-1 truncate text-left text-base font-semibold text-foreground">
         {item.label}

@@ -10,7 +10,7 @@ export const profile = {
 export type LinkItem = {
   label: string;
   href: string;
-  icon: "youtube" | "instagram" | "facebook" | "whatsapp" | "handshake";
+  icon: "youtube" | "instagram" | "facebook" | "whatsapp" | "handshake" | "tiktok";
 };
 
 export const links: LinkItem[] = [
@@ -23,4 +23,5 @@ export const links: LinkItem[] = [
   { label: "Instagram", href: "https://www.instagram.com/ulissislima", icon: "instagram" },
   { label: "Facebook", href: "https://www.facebook.com/ulissis.lima/", icon: "facebook" },
   { label: "YouTube", href: "https://www.youtube.com/@UlissisLima", icon: "youtube" },
+  { label: "TikTok", href: "https://www.tiktok.com/@ulissislima", icon: "tiktok" },
 ];
